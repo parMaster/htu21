@@ -41,7 +41,7 @@ func (d *Dev) Reset() error {
 	if err != nil {
 		return d.wrap(err)
 	}
-	doSleep(time.Millisecond * 15)
+	time.Sleep(time.Millisecond * 15)
 	return nil
 }
 
@@ -57,7 +57,7 @@ func (d *Dev) Sense(e *physic.Env) error {
 	if err != nil {
 		return d.wrap(err)
 	}
-	doSleep(50 * time.Millisecond)
+	time.Sleep(50 * time.Millisecond)
 
 	rawData, err := d.read()
 	if err != nil {
@@ -77,7 +77,7 @@ func (d *Dev) Sense(e *physic.Env) error {
 	if err != nil {
 		return d.wrap(err)
 	}
-	doSleep(16 * time.Millisecond)
+	time.Sleep(16 * time.Millisecond)
 
 	rawData, err = d.read()
 	if err != nil {
@@ -150,5 +150,3 @@ func (d *Dev) read() ([]byte, error) {
 func (d *Dev) wrap(err error) error {
 	return fmt.Errorf("%e", err)
 }
-
-var doSleep = time.Sleep
