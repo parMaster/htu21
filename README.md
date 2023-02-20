@@ -28,6 +28,6 @@ This package is a heavily rewritten [idahoakl/HTU21D-sensor](https://github.com/
 - [periph.io physic](http://periph.io/x/conn/v3/physic) package for environmental data (temperature and relative humidity)
 - one function *Sense()* instead of separate functions for each measurement 
 - no proprietary logging package
-- no write/read user registry functions #for now# 
+- no write/read user registry functions **for now**
   
 I'd really like to get rid of proprietary CRC checking dependency as well.
