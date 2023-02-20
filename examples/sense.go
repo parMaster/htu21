@@ -36,7 +36,14 @@ func main() {
 	if err := htu21Device.Sense(&htu21Data); err != nil {
 		log.Fatal(err)
 	}
+	// That's it!
 
+	// Since it implements String() interface:
 	log.Println(htu21Data.Temperature)
 	log.Println(htu21Data.Humidity)
+
+	// periph.io physic package allows do thing like:
+	log.Println(htu21Data.Temperature.Celsius())
+	log.Printf("Temperature: %.2f˚C", htu21Data.Temperature.Celsius())
+	log.Printf("Temperature: %.2fF", htu21Data.Temperature.Fahrenheit())
 }
