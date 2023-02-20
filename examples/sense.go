@@ -46,4 +46,6 @@ func main() {
 	log.Println(htu21Data.Temperature.Celsius())
 	log.Printf("Temperature: %.2f˚C", htu21Data.Temperature.Celsius())
 	log.Printf("Temperature: %.2fF", htu21Data.Temperature.Fahrenheit())
+
+	log.Printf("Humidity (milliRH): %s", htu21Data.Humidity/physic.MilliRH*physic.PercentRH)
 }
