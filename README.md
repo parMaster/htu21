@@ -1,6 +1,6 @@
 # HTU21 (SHT21, SI7021) golang package
 
-This package allows you to connect and read environmental data from HTU21 (SHT21, SI7021) sensor. It tries to comply with periph.io sensors interface like [bmxx80](https://periph.io/device/bmxx80/) in terms of the ways to access I²C, function calls and data returned.
+This package allows you to connect and read environmental data from HTU21 (SHT21, SI7021) sensor. I guess it could be qualified as a Periph.io driver, because it tries to comply with periph.io sensors interface like [bmxx80](https://periph.io/device/bmxx80/) in terms of the ways to access I²C, function calls and data returned.
 
 ## Example
 You can find an example in cmd folder, it works on RPi 4 with HTU21 connected to 4-th I²C bus, sensor address is 0x40. List of I²C buses can be obtained with 
